@@ -18,4 +18,3 @@ def display_header():
 
 if __name__ == "__main__":
     display_header()
-
