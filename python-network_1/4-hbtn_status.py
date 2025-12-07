@@ -1,21 +1,15 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status using the requests package."""
-
+"""Fetches https://intranet.hbtn.io/status using requests."""
 import requests
 
 
-def fetch_status():
-    """Fetches URL and prints the response body in formatted output."""
+if __name__ == "__main__":
     url = "https://intranet.hbtn.io/status"
+
     response = requests.get(url)
 
-    body = response.text
+    content = response.text
 
     print("Body response:")
-    print(f"\t- type: {type(body)}")
-    print(f"\t- content: {body}")
-
-
-if __name__ == "__main__":
-    fetch_status()
-
+    print("\t- type: {}".format(type(content)))
+    print("\t- content: {}".format(content))
